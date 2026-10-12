@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <p class="label">WEATHER <span>APP</span></p>
+    <h1>Check the weather anywhere</h1>
+
+    <form id="searchForm" class="search">
+      <input id="cityInput" type="text" placeholder="Enter a city" aria-label="City name">
+      <button id="searchBtn" type="submit">Search</button>
+    </form>
+
+    <div class="status-row">
+      <p id="status" class="status"></p>
+      <button id="retryBtn" class="retry" type="button">Retry</button>
+    </div>
+
+    <div id="result" class="result">
+      <div class="card">
+        <div class="top">
+          <div>
+            <h2 id="cityName"></h2>
+            <p id="country" class="muted"></p>
+          </div>
+          <div id="icon" class="icon"></div>
+        </div>
+
+        <div id="temp" class="temp"></div>
+        <p id="condition" class="condition"></p>
+
+        <div class="details">
+          <div class="box">
+            <p class="muted">Feels like</p>
+            <p id="feels" class="value"></p>
+          </div>
+          <div class="box">
+            <p class="muted">Humidity</p>
+            <p id="humidity" class="value"></p>
+          </div>
+          <div class="box">
+            <p class="muted">Wind</p>
+            <p id="wind" class="value"></p>
+          </div>
+          <div class="box">
+            <p class="muted">Rain</p>
+            <p id="rain" class="value"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="muted">3-day forecast</h3>
+        <ul id="forecast" class="forecast"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
